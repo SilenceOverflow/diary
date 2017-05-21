@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="/diary/css/main.css">
+    <link rel="stylesheet" href="/diary/css/calendar.css">
+    <link rel="stylesheet" href="/diary/css/font-awesome.min.css">
+    <title>所丫日报</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><i class="fa fa-paper-plane-o"></i></li>
+			<!--get the nav links in  _config.yml -->
+			
+			<li><a href="http://soyaine.cn">Home</a></li>
+			
+			<li><a href="http://soyaine.cn/diary/">Diary</a></li>
+			
+			<li><a href="http://soyaine.cn/read/">Read</a></li>
+			
+			<li><a href="http://soyaine.cn/FE-Practice/">Works</a></li>
+			
+			<li><a href="http://soyaine.cn/about.html">About</a></li>
+			
+        </ul>
+    </nav>
+
+    
+    <a id="oldPostBtn" class="btn nav-button" href="/diary/2017/01/02/soyaine-daily-072" title="上一篇"><i class="btn fa fa-3x fa-angle-left"></i></a>
+    
+
+    
+    <a id="nextPostBtn" class="btn nav-button" href="/diary/2017/01/06/soyaine-daily-074" title="下一篇"><i class="btn fa fa-3x fa-angle-right"></i></a>
+    
+</header>
+<div class="paper paper-before" id="paperBefore"></div>
+<div class="paper paper-article">
+    <!-- Date No. sign -->
+    <a href="#" title="点击查看日历">
+    <span id="openBtn" class="date-index">
+        No.
+        <!--Page NO.-->
+		073<br>
+		 <!--Date yyyy.mm.dd-->
+        2017-01-03
+    </span>
+    </a>
+	
+    <!--Calendar body-->
+    <!--日历组件-->
+<div id="calendar" class="calendar">
+
+    <i id="closeBtn" class="btn fa fa-close" style="display: block"></i>
+
+    <div id="cal-year" class="cal-year">
+        <i id="lastYearBtn" class="btn fa fa-angle-left"></i>
+        <label>2017</label>
+        <i id="nextYearBtn" class="btn fa fa-angle-right"></i>
+    </div>
+
+    <div id="dateTable" class="cal-body">
+
+        <ul id="cal-month" class="cal-month">
+            <li title="0">Jan</li>
+            <li title="1">Feb</li>
+            <li title="2">Mar</li>
+            <li title="3">Apr</li>
+            <li title="4">May</li>
+            <li title="5">Jun</li>
+            <li title="6">Jul</li>
+            <li title="7">Aug</li>
+            <li title="8">Sep</li>
+            <li title="9">Oct</li>
+            <li title="10">Nov</li>
+            <li title="11" class="cal-this-month">Dec</li>
+        </ul>
+
+        <ul id="cal-week" class="cal-body cal-week">
+            <li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li>
+        </ul>
+
+        <ul id="cal-day1" class="cal-body cal-body-day">
+            <li id="2016/11/27" class="cal-day">27</li>
+            <li id="2016/11/28" class="cal-day">28</li>
+            <li id="2016/11/29" class="cal-day">29</li>
+            <li id="2016/11/30" class="cal-day"><a href="#">30</a></li>
+            <li id="2016/12/1" class="cal-day">1</li>
+            <li id="2016/12/2" class="cal-day cal-now">2</li>
+            <li id="2016/12/3" class="cal-day">3</li>
+        </ul>
+        <ul id="cal-day2" class="cal-body cal--body-day">
+            <li id="2016/12/4" class="cal-day">4</li>
+            <li id="2016/12/5" class="cal-day">5</li>
+            <li id="2016/12/6" class="cal-day">6</li>
+            <li id="2016/12/7" class="cal-day">7</li>
+            <li id="2016/12/8" class="cal-day">8</li>
+            <li id="2016/12/9" class="cal-day">9</li>
+            <li id="2016/12/10" class="cal-day">10</li>
+        </ul>
+        <ul id="cal-day3" class="cal-body cal-body-day">
+            <li id="2016/12/11" class="cal-day">11</li>
+            <li id="2016/12/12" class="cal-day">12</li>
+            <li id="2016/12/13" class="cal-day">13</li>
+            <li id="2016/12/14" class="cal-day">14</li>
+            <li id="2016/12/15" class="cal-day">15</li>
+            <li id="2016/12/16" class="cal-day">16</li>
+            <li id="2016/12/17" class="cal-day">17</li>
+        </ul>
+        <ul id="cal-day4" class="cal-body cal-body-day">
+            <li id="2016/12/18" class="cal-day">18</li>
+            <li id="2016/12/19" class="cal-day">19</li>
+            <li id="2016/12/20" class="cal-day">20</li>
+            <li id="2016/12/21" class="cal-day">21</li>
+            <li id="2016/12/22" class="cal-day">22</li>
+            <li id="2016/12/23" class="cal-day">23</li>
+            <li id="2016/12/24" class="cal-day">24</li>
+        </ul>
+        <ul id="cal-day5" class="cal-body cal-body-day">
+            <li id="2016/12/25" class="cal-day">25</li>
+            <li id="2016/12/26" class="cal-day">26</li>
+            <li id="2016/12/27" class="cal-day">27</li>
+            <li id="2016/12/28" class="cal-day">28</li>
+            <li id="2016/12/29" class="cal-day">29</li>
+            <li id="2016/12/30" class="cal-day">30</li>
+            <li id="2016/12/31" class="cal-day">31</li>
+        </ul>
+        <ul id="cal-day6" class="cal-body cal-body-day">
+            <li id="2017/1/1" class="cal-day">1</li>
+            <li id="2017/1/2" class="cal-day">2</li>
+            <li id="2017/1/3" class="cal-day">3</li>
+            <li id="2017/1/4" class="cal-day">4</li>
+            <li id="2017/1/5" class="cal-day">5</li>
+            <li id="2017/1/6" class="cal-day">6</li>
+            <li id="2017/1/7" class="cal-day">7</li>
+        </ul>
+    </div>
+
+</div>
+
+
+<script>
+    var urlJSON = {
+    
+    "2017/5/13": {
+        url: "/diary/2017/05/13/soyaine-daily-118" ,
+                excerpt: ""
+    },
+    
+    "2017/5/12": {
+        url: "/diary/2017/05/12/soyaine-daily-117" ,
+                excerpt: ""
+    },
+    
+    "2017/5/11": {
+        url: "/diary/2017/05/11/soyaine-daily-116" ,
+                excerpt: ""
+    },
+    
+    "2017/5/9": {
+        url: "/diary/2017/05/09/soyaine-daily-115" ,
+                excerpt: ""
+    },
+    
+    "2017/5/8": {
+        url: "/diary/2017/05/08/soyaine-daily-114" ,
+                excerpt: ""
+    },
+    
+    "2017/5/7": {
+        url: "/diary/2017/05/07/soyaine-daily-113" ,
+                excerpt: ""
+    },
+    
+    "2017/5/6": {
+        url: "/diary/2017/05/06/soyaine-daily-112" ,
+                excerpt: ""
+    },
+    
+    "2017/5/5": {
+        url: "/diary/2017/05/05/soyaine-daily-111" ,
+                excerpt: ""
+    },
+    
+    "2017/5/4": {
+        url: "/diary/2017/05/04/soyaine-daily-110" ,
+                excerpt: ""
+    },
+    
+    "2017/5/3": {
+        url: "/diary/2017/05/03/soyaine-daily-109" ,
+                excerpt: ""
+    },
+    
+    "2017/5/2": {
+        url: "/diary/2017/05/02/soyaine-daily-108" ,
+                excerpt: ""
+    },
+    
+    "2017/5/1": {
+        url: "/diary/2017/05/01/soyaine-daily-107" ,
+                excerpt: ""
+    },
+    
+    "2017/4/30": {
+        url: "/diary/2017/04/30/soyaine-daily-106" ,
+                excerpt: ""
+    },
+    
+    "2017/4/28": {
+        url: "/diary/2017/04/28/soyaine-daily-105" ,
+                excerpt: ""
+    },
+    
+    "2017/4/27": {
+        url: "/diary/2017/04/27/soyaine-daily-104" ,
+                excerpt: ""
+    },
+    
+    "2017/4/25": {
+        url: "/diary/2017/04/25/soyaine-daily-103" ,
+                excerpt: ""
+    },
+    
+    "2017/4/24": {
+        url: "/diary/2017/04/24/soyaine-daily-102" ,
+                excerpt: ""
+    },
+    
+    "2017/4/23": {
+        url: "/diary/2017/04/23/soyaine-daily-101" ,
+                excerpt: ""
+    },
+    
+    "2017/4/22": {
+        url: "/diary/2017/04/22/soyaine-daily-100" ,
+                excerpt: ""
+    },
+    
+    "2017/4/21": {
+        url: "/diary/2017/04/21/soyaine-daily-099" ,
+                excerpt: ""
+    },
+    
+    "2017/4/20": {
+        url: "/diary/2017/04/20/soyaine-daily-098" ,
+                excerpt: ""
+    },
+    
+    "2017/4/19": {
+        url: "/diary/2017/04/19/soyaine-daily-097" ,
+                excerpt: "开发手记"
+    },
+    
+    "2017/4/18": {
+        url: "/diary/2017/04/18/soyaine-daily-096" ,
+                excerpt: ""
+    },
+    
+    "2017/4/17": {
+        url: "/diary/2017/04/17/soyaine-daily-095" ,
+                excerpt: ""
+    },
+    
+    "2017/4/16": {
+        url: "/diary/2017/04/16/soyaine-daily-094" ,
+                excerpt: "GDG-Women Techmakers 北京站的一些记录 + About更新记录"
+    },
+    
+    "2017/4/15": {
+        url: "/diary/2017/04/15/soyaine-daily-093" ,
+                excerpt: ""
+    },
+    
+    "2017/4/14": {
+        url: "/diary/2017/04/14/soyaine-daily-092" ,
+                excerpt: ""
+    },
+    
+    "2017/4/13": {
+        url: "/diary/2017/04/13/soyaine-daily-091" ,
+                excerpt: ""
+    },
+    
+    "2017/4/12": {
+        url: "/diary/2017/04/12/soyaine-daily-090" ,
+                excerpt: ""
+    },
+    
+    "2017/3/31": {
+        url: "/diary/2017/03/31/soyaine-daily-089" ,
+                excerpt: ""
+    },
+    
+    "2017/3/24": {
+        url: "/diary/2017/03/24/soyaine-daily-088" ,
+                excerpt: "强行凑字数的五连击♪(^∇^*)"
+    },
+    
+    "2017/3/23": {
+        url: "/diary/2017/03/23/soyaine-daily-087" ,
+                excerpt: "新的旅程开始了~"
+    },
+    
+    "2017/3/22": {
+        url: "/diary/2017/03/22/soyaine-daily-086" ,
+                excerpt: "好久好久没练习，去吹笛子晃悠了一圈，很治愈。看完《四重奏》大结局，很温馨。"
+    },
+    
+    "2017/3/21": {
+        url: "/diary/2017/03/21/soyaine-daily-085" ,
+                excerpt: "偶遇之喜"
+    },
+    
+    "2017/3/20": {
+        url: "/diary/2017/03/20/soyaine-daily-084" ,
+                excerpt: "据说今天是国际幸福日，召唤了一次图片精灵"
+    },
+    
+    "2017/3/19": {
+        url: "/diary/2017/03/19/soyaine-daily-083" ,
+                excerpt: "ECharts 中箱线图的数据问题"
+    },
+    
+    "2017/3/18": {
+        url: "/diary/2017/03/18/soyaine-daily-082" ,
+                excerpt: ""
+    },
+    
+    "2017/2/24": {
+        url: "/diary/2017/02/24/soyaine-daily-081" ,
+                excerpt: ""
+    },
+    
+    "2017/2/22": {
+        url: "/diary/2017/02/22/soyaine-daily-080" ,
+                excerpt: ""
+    },
+    
+    "2017/1/11": {
+        url: "/diary/2017/01/11/soyaine-daily-079" ,
+                excerpt: ""
+    },
+    
+    "2017/1/10": {
+        url: "/diary/2017/01/10/soyaine-daily-078" ,
+                excerpt: "Diary 更新日志，TransChart 项目进程记录"
+    },
+    
+    "2017/1/9": {
+        url: "/diary/2017/01/09/soyaine-daily-077" ,
+                excerpt: "TransChart 项目进程记录，阅读记录：EJS Jade MVC MVVM"
+    },
+    
+    "2017/1/8": {
+        url: "/diary/2017/01/08/soyaine-daily-076" ,
+                excerpt: ""
+    },
+    
+    "2017/1/7": {
+        url: "/diary/2017/01/07/soyaine-daily-075" ,
+                excerpt: ""
+    },
+    
+    "2017/1/6": {
+        url: "/diary/2017/01/06/soyaine-daily-074" ,
+                excerpt: ""
+    },
+    
+    "2017/1/3": {
+        url: "/diary/2017/01/03/soyaine-daily-073" ,
+                excerpt: ""
+    },
+    
+    "2017/1/2": {
+        url: "/diary/2017/01/02/soyaine-daily-072" ,
+                excerpt: "The Impossible Dream (The Quest)"
+    },
+    
+    "2017/1/1": {
+        url: "/diary/2017/01/01/soyaine-daily-071" ,
+                excerpt: ""
+    },
+    
+    "2016/12/31": {
+        url: "/diary/2016/12/31/soyaine-daily-070" ,
+                excerpt: "关于 GitHub 图片加载的问题手记，关于 HTTP header 中的 Content-Length"
+    },
+    
+    "2016/12/29": {
+        url: "/diary/2016/12/29/soyaine-daily-069" ,
+                excerpt: ""
+    },
+    
+    "2016/12/28": {
+        url: "/diary/2016/12/28/soyaine-daily-068" ,
+                excerpt: ""
+    },
+    
+    "2016/12/27": {
+        url: "/diary/2016/12/27/soyaine-daily-067" ,
+                excerpt: ""
+    },
+    
+    "2016/12/25": {
+        url: "/diary/2016/12/25/soyaine-daily-066" ,
+                excerpt: ""
+    },
+    
+    "2016/12/24": {
+        url: "/diary/2016/12/24/soyaine-daily-065" ,
+                excerpt: ""
+    },
+    
+    "2016/12/23": {
+        url: "/diary/2016/12/23/soyaine-daily-064" ,
+                excerpt: ""
+    },
+    
+    "2016/12/22": {
+        url: "/diary/2016/12/22/soyaine-daily-063" ,
+                excerpt: "学习笔记"
+    },
+    
+    "2016/12/21": {
+        url: "/diary/2016/12/21/soyaine-daily-062" ,
+                excerpt: ""
+    },
+    
+    "2016/12/20": {
+        url: "/diary/2016/12/20/soyaine-daily-061" ,
+                excerpt: "JavaScript30 begin"
+    },
+    
+    "2016/12/11": {
+        url: "/diary/2016/12/11/soyaine-daily-060" ,
+                excerpt: ""
+    },
+    
+    "2016/12/10": {
+        url: "/diary/2016/12/10/soyaine-daily-059" ,
+                excerpt: ""
+    },
+    
+    "2016/12/9": {
+        url: "/diary/2016/12/09/soyaine-daily-058" ,
+                excerpt: "看了《你的名字》"
+    },
+    
+    "2016/12/8": {
+        url: "/diary/2016/12/08/soyaine-daily-057" ,
+                excerpt: "something about liquid"
+    },
+    
+    "2016/12/7": {
+        url: "/diary/2016/12/07/soyaine-daily-056" ,
+                excerpt: ""
+    },
+    
+    "2016/12/6": {
+        url: "/diary/2016/12/06/soyaine-daily-055" ,
+                excerpt: "意外重新发现 Chain"
+    },
+    
+    "2016/12/5": {
+        url: "/diary/2016/12/05/soyaine-daily-054" ,
+                excerpt: ""
+    },
+    
+    "2016/12/4": {
+        url: "/diary/2016/12/04/soyaine-daily-053" ,
+                excerpt: "初步完成 diary 的雏形，看《我，堂吉诃德》的音乐剧"
+    },
+    
+    "2016/12/3": {
+        url: "/diary/2016/12/03/soyaine-daily-052" ,
+                excerpt: ""
+    },
+    
+    "2016/12/2": {
+        url: "/diary/2016/12/02/soyaine-daily-051" ,
+                excerpt: ""
+    },
+    
+    "2016/9/27": {
+        url: "/diary/2016/09/27/soyaine-daily-050" ,
+                excerpt: "版式设计的学习"
+    },
+    
+    "2016/7/12": {
+        url: "/diary/2016/07/12/soyaine-daily-049" ,
+                excerpt: "简单的每日总结"
+    },
+    
+    "2016/7/11": {
+        url: "/diary/2016/07/11/soyaine-daily-048" ,
+                excerpt: "零散的感想总结"
+    },
+    
+    "2016/6/30": {
+        url: "/diary/2016/06/30/soyaine-daily-047" ,
+                excerpt: ""
+    },
+    
+    "2016/6/29": {
+        url: "/diary/2016/06/29/soyaine-daily-046" ,
+                excerpt: ""
+    },
+    
+    "2016/6/28": {
+        url: "/diary/2016/06/28/soyaine-daily-045" ,
+                excerpt: ""
+    },
+    
+    "2016/6/14": {
+        url: "/diary/2016/06/14/soyaine-daily-044" ,
+                excerpt: "其他想法"
+    },
+    
+    "2016/6/13": {
+        url: "/diary/2016/06/13/soyaine-daily-043" ,
+                excerpt: "学习笔记"
+    },
+    
+    "2016/6/11": {
+        url: "/diary/2016/06/11/soyaine-daily-042" ,
+                excerpt: "反思"
+    },
+    
+    "2016/6/9": {
+        url: "/diary/2016/06/09/soyaine-daily-041" ,
+                excerpt: "学习笔记 JavaScript下拉框选值"
+    },
+    
+    "2016/6/5": {
+        url: "/diary/2016/06/05/soyaine-daily-040" ,
+                excerpt: "求职进展"
+    },
+    
+    "2016/6/4": {
+        url: "/diary/2016/06/04/soyaine-daily-039" ,
+                excerpt: "求职进程"
+    },
+    
+    "2016/6/3": {
+        url: "/diary/2016/06/03/soyaine-daily-038" ,
+                excerpt: "关于日报，话语摘录，学习笔记，求职进程"
+    },
+    
+    "2016/6/1": {
+        url: "/diary/2016/06/01/soyaine-daily-037" ,
+                excerpt: "学习汇报"
+    },
+    
+    "2016/5/31": {
+        url: "/diary/2016/05/31/soyaine-daily-036" ,
+                excerpt: "学习汇报"
+    },
+    
+    "2016/5/30": {
+        url: "/diary/2016/05/30/soyaine-daily-035" ,
+                excerpt: "读书心得《天龙八部》，学习进程"
+    },
+    
+    "2016/5/29": {
+        url: "/diary/2016/05/29/soyaine-daily-034" ,
+                excerpt: "学习汇报，其他想法，读书心得"
+    },
+    
+    "2016/5/28": {
+        url: "/diary/2016/05/28/soyaine-daily-033" ,
+                excerpt: "生活的思考，学习笔记 CSS Transform"
+    },
+    
+    "2016/5/25": {
+        url: "/diary/2016/05/25/soyaine-daily-032" ,
+                excerpt: "知乎掠影，读书心得"
+    },
+    
+    "2016/5/24": {
+        url: "/diary/2016/05/24/soyaine-daily-031" ,
+                excerpt: "关于日报，学习笔记，其他想法"
+    },
+    
+    "2016/5/23": {
+        url: "/diary/2016/05/23/soyaine-daily-030" ,
+                excerpt: "关于日报 关于网站 其他想法"
+    },
+    
+    "2016/5/22": {
+        url: "/diary/2016/05/22/soyaine-daily-029" ,
+                excerpt: "两句勉励自己的话"
+    },
+    
+    "2016/5/20": {
+        url: "/diary/2016/05/20/soyaine-daily-028" ,
+                excerpt: "学习笔记 CSS绘图"
+    },
+    
+    "2016/5/18": {
+        url: "/diary/2016/05/18/soyaine-daily-027" ,
+                excerpt: "总结"
+    },
+    
+    "2016/5/17": {
+        url: "/diary/2016/05/17/soyaine-daily-026" ,
+                excerpt: "睡前随想"
+    },
+    
+    "2016/5/16": {
+        url: "/diary/2016/05/16/soyaine-daily-025" ,
+                excerpt: "学习笔记 居中心得、类图"
+    },
+    
+    "2016/5/15": {
+        url: "/diary/2016/05/15/soyaine-daily-024" ,
+                excerpt: "学习笔记 居中，其他想法"
+    },
+    
+    "2016/5/14": {
+        url: "/diary/2016/05/14/soyaine-daily-023" ,
+                excerpt: "学习笔记 CSS布局-position float z-index，其他想法"
+    },
+    
+    "2016/5/13": {
+        url: "/diary/2016/05/13/soyaine-daily-022" ,
+                excerpt: "时间管理，读书心得《奇特的一生》，关于日报，其他想法"
+    },
+    
+    "2016/5/11": {
+        url: "/diary/2016/05/11/soyaine-daily-021" ,
+                excerpt: "读书心得《茶馆之殇》，其他想法"
+    },
+    
+    "2016/5/10": {
+        url: "/diary/2016/05/10/soyaine-daily-020" ,
+                excerpt: "读书心得《茶馆之殇》，其他想法"
+    },
+    
+    "2016/5/9": {
+        url: "/diary/2016/05/09/soyaine-daily-019" ,
+                excerpt: "其他想法"
+    },
+    
+    "2016/5/8": {
+        url: "/diary/2016/05/08/soyaine-daily-018" ,
+                excerpt: "学习笔记，其他想法"
+    },
+    
+    "2016/5/7": {
+        url: "/diary/2016/05/07/soyaine-daily-017" ,
+                excerpt: "学习笔记，其他想法"
+    },
+    
+    "2016/5/6": {
+        url: "/diary/2016/05/06/soyaine-daily-016" ,
+                excerpt: "学习笔记，观剧心得，读书心得"
+    },
+    
+    "2016/5/5": {
+        url: "/diary/2016/05/05/soyaine-daily-015" ,
+                excerpt: "其他想法 读书心得 观影心得"
+    },
+    
+    "2016/5/4": {
+        url: "/diary/2016/05/04/soyaine-daily-014" ,
+                excerpt: "读书心得，阅读《成功，动机与目标》 "
+    },
+    
+    "2016/5/3": {
+        url: "/diary/2016/05/03/soyaine-daily-013" ,
+                excerpt: "关于日报，学习笔记 CSS盒模型，IFE Practice，阅读，运动"
+    },
+    
+    "2016/5/2": {
+        url: "/diary/2016/05/02/soyaine-daily-012" ,
+                excerpt: "学习笔记 CSS 盒模型"
+    },
+    
+    "2016/5/1": {
+        url: "/diary/2016/05/01/soyaine-daily-011" ,
+                excerpt: "观剧心得《Legal High》第 8、11 集，读书心得《成功，动机与目标》，关于日报，行动反思"
+    },
+    
+    "2016/4/30": {
+        url: "/diary/2016/04/30/soyaine-daily-010" ,
+                excerpt: "观剧心得《Legal High》第 7 集，读书心得《成功，动机与目标》《MacTalk 跨越边界》，其他想法 Coursera - Learn How to Learn"
+    },
+    
+    "2016/4/29": {
+        url: "/diary/2016/04/29/soyaine-daily-009" ,
+                excerpt: "观剧心得《Legal High》第 6 集，读书心得《成功，动机与目标》"
+    },
+    
+    "2016/4/28": {
+        url: "/diary/2016/04/28/soyaine-daily-008" ,
+                excerpt: "观剧心得《Legal High》第 5 集，读书心得《成功，动机与目标》"
+    },
+    
+    "2016/4/27": {
+        url: "/diary/2016/04/27/soyaine-daily-007" ,
+                excerpt: "观剧心得《Legal High》第2、3、4集，学习心得「元」CMS"
+    },
+    
+    "2016/4/26": {
+        url: "/diary/2016/04/26/soyaine-daily-006" ,
+                excerpt: "阅读心得《奖赏会伤人》、Learn How to Learn、 TED、 高情商的人如何在沟通中化险为夷？，关于公众号"
+    },
+    
+    "2016/4/25": {
+        url: "/diary/2016/04/25/soyaine-daily-005" ,
+                excerpt: "关于日报，随思随想，阅读心得，观剧心得《琅琊榜》《未生》第 19 集"
+    },
+    
+    "2016/4/24": {
+        url: "/diary/2016/04/24/soyaine-daily-004" ,
+                excerpt: "关于日报，关于技能，关于生活"
+    },
+    
+    "2016/4/23": {
+        url: "/diary/2016/04/23/soyaine-daily-003" ,
+                excerpt: "读书心得《把时间当做朋友》"
+    },
+    
+    "2016/4/22": {
+        url: "/diary/2016/04/22/soyaine-daily-002" ,
+                excerpt: "关于技能 Python抓数据"
+    },
+    
+    "2016/4/21": {
+        url: "/diary/2016/04/21/soyaine-daily-001" ,
+                excerpt: "关于日报，读书札记《把时间当做朋友》，关于技能 CSS，其他内容 小狼毫/鼠须管"
+    },
+    
+    "2015/6/12": {
+        url: "/diary/2015/06/12/hello-aoao" ,
+                excerpt: "Hello World"
+    },
+    
+    "end": "end"
+    };
+</script>
+<script type="text/javascript" src="/diary/js/calendar.js"></script>
+
+    <!--Article body-->
+    <article class="typo">
+        <link rel="stylesheet" href="/diary/css/syntax.css">
+<link rel="stylesheet" href="/diary/css/typo.css">
+<h2 id="统计公众号数据">统计公众号数据</h2>
+
+<p>话说手里拿着锤子，看见什么都是钉子。今天有人通过我的 GitHub 关注了我的公众号，这还是第一次有人通过这个途径关注，惊喜之余看了看微信公众平台，就手痒想要用那天新学的办法统计一下去年的数据。</p>
+
+<p>首先分析了一下数据部分的 HTML 结构：</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"appmsgSendedItem multiple_appmsg"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"title_wrp"</span> <span class="na">href=</span><span class="s">"http://mp.weixin.qq.com/s?__biz=...mid=...;idx=1;sn=....chksm=...#rd"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon_lh cover"</span> <span class="na">style=</span><span class="s">"background-image:url(https://mmbiz.qlogo.cn/mmbiz_jpg/...);"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>[图文1]元学习课程的回顾和总结<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"desc"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div&gt;</span>
+                <span class="nt">&lt;span&gt;</span>阅读 112<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span&gt;</span>点赞 9<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p>所以主要的数据：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.appmsgSendedItem.multiple_appmsg （此处我忽略了只发图片的消息）
+	.title_wrp 文章链接
+		.cover 题图
+		.title 文章标题
+	.desc 点击数据
+		span 阅读
+		span 点赞
+</code></pre>
+</div>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">articles</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.appmsgSendedItem.multiple_appmsg'</span><span class="p">));</span>
+<span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="nx">articles</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="kr">const</span> <span class="nx">article</span> <span class="o">=</span> <span class="p">{};</span>
+	<span class="nx">article</span><span class="p">.</span><span class="nx">url</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'a.title_wrp'</span><span class="p">).</span><span class="nx">href</span><span class="p">;</span>
+	<span class="nx">article</span><span class="p">.</span><span class="nx">img</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'span.cover'</span><span class="p">).</span><span class="nx">style</span><span class="p">[</span><span class="s2">"background-image"</span><span class="p">];</span>
+	<span class="nx">article</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'span.title'</span><span class="p">).</span><span class="nx">innerText</span><span class="p">;</span>
+	<span class="kr">const</span> <span class="nx">visit</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'div.desc span'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">innerText</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">[^</span><span class="sr">0-9</span><span class="se">]</span><span class="sr">/g</span><span class="p">,</span><span class="s2">""</span><span class="p">);</span>
+	<span class="kr">const</span> <span class="nx">like</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'div.desc span'</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nx">innerText</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">[^</span><span class="sr">0-9</span><span class="se">]</span><span class="sr">/g</span><span class="p">,</span><span class="s2">""</span><span class="p">);</span>
+	<span class="nx">article</span><span class="p">.</span><span class="nx">visit</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">visit</span><span class="p">);</span>
+	<span class="nx">article</span><span class="p">.</span><span class="nx">like</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">like</span><span class="p">);</span>
+	<span class="nx">data</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">article</span><span class="p">);</span>
+	<span class="k">return</span> <span class="nx">article</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>忘了日期重新修改一下，发现这里竟然可以用 <code class="highlighter-rouge">[id]</code> 来表示具有 id 属性的元素选择符。</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">articles</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'tr.mass_item[id]'</span><span class="p">));</span> 
+<span class="nx">articles</span> <span class="o">=</span> <span class="nx">articles</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="nx">item</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'div.multiple_appmsg'</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="nx">articles</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="kr">const</span> <span class="nx">article</span> <span class="o">=</span> <span class="p">{};</span>
+	<span class="nx">article</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'span.title'</span><span class="p">).</span><span class="nx">innerText</span><span class="p">;</span>
+	<span class="nx">article</span><span class="p">.</span><span class="nx">time</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'p.mass_time'</span><span class="p">).</span><span class="nx">innerText</span><span class="p">;</span>
+	<span class="nx">article</span><span class="p">.</span><span class="nx">url</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'div.multiple_appmsg a.title_wrp'</span><span class="p">).</span><span class="nx">href</span> <span class="o">||</span> <span class="s2">""</span><span class="p">;</span>
+	<span class="nx">article</span><span class="p">.</span><span class="nx">img</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'span.cover'</span><span class="p">).</span><span class="nx">style</span><span class="p">[</span><span class="s2">"background-image"</span><span class="p">];</span>
+	<span class="kr">const</span> <span class="nx">visit</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'div.desc span'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">innerText</span><span class="p">;</span>
+	<span class="kr">const</span> <span class="nx">like</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'div.desc span'</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nx">innerText</span><span class="p">;</span>
+	<span class="nx">article</span><span class="p">.</span><span class="nx">visit</span> <span class="o">=</span> <span class="nx">visit</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">[^</span><span class="sr">0-9</span><span class="se">]</span><span class="sr">/g</span><span class="p">,</span><span class="s2">""</span><span class="p">);</span>
+	<span class="nx">article</span><span class="p">.</span><span class="nx">like</span> <span class="o">=</span> <span class="nx">like</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">[^</span><span class="sr">0-9</span><span class="se">]</span><span class="sr">/g</span><span class="p">,</span><span class="s2">""</span><span class="p">);</span>
+	<span class="nx">data</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">article</span><span class="p">);</span>
+	<span class="k">return</span> <span class="nx">article</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="nx">data</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">time</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">[^</span><span class="sr">0-9</span><span class="se">]</span><span class="sr">/g</span><span class="p">,</span><span class="s2">""</span><span class="p">)</span> <span class="o">-</span> <span class="nx">b</span><span class="p">.</span><span class="nx">time</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">[^</span><span class="sr">0-9</span><span class="se">]</span><span class="sr">/g</span><span class="p">,</span><span class="s2">""</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<script>
+var data = [
+ {
+  "title": "[图文1]今天没有更新",
+  "time": "2016年11月16日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650271053&idx=1&sn=f526110027ea79f536f0b29d5908d2d5&chksm=8fd24300b8a5ca16302f4f19ba5d52acf806c8d1a1dc7c3f0ccf6eff7b73db7ad169966fe972#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz_jpg/Penxjq6k4sebcX73xZjH9StQeY8Tn6vdRKVPlzzph97JjttIZW8zepWQfaRC7PsDh4n8pmnen1adbYbP2u5vng/0?wx_fmt=jpeg\")",
+  "visit": 37,
+  "like": 7
+ },
+ {
+  "title": "[图文1]元学习课程的回顾和总结",
+  "time": "2016年11月11日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650271049&idx=1&sn=3fb659ecf286b153a6052492a432cda5&chksm=8fd24304b8a5ca12b79e0a4af1d24b6376306126ef8fde6295fca7fec7a7c4037b5f7b50e93b#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz_jpg/Penxjq6k4sf31JUqrjic5s70cUUoV2BKKKwyicqzLuS9nwqPgvepib5T9VeHnWTnHicLNZrw4Dx9ict1Bu6mbvJGQdA/0?wx_fmt=jpeg\")",
+  "visit": 113,
+  "like": 9
+ },
+ {
+  "title": "[图文1]xRite 的元学习课程回顾和总结",
+  "time": "2016年11月10日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650271040&idx=1&sn=b3395400898b204b0f26c913fb6bb3bc&chksm=8fd2430db8a5ca1bc6db446f6aedef704516e91574c80cbfa2ef42ef754ffb04ad17801c357d#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz_jpg/Penxjq6k4sf31JUqrjic5s70cUUoV2BKKKwyicqzLuS9nwqPgvepib5T9VeHnWTnHicLNZrw4Dx9ict1Bu6mbvJGQdA/0?wx_fmt=jpeg\")",
+  "visit": 1,
+  "like": 0
+ },
+ {
+  "title": "[图文1]呓语 | 草木黄落兮雁南归",
+  "time": "2016年11月02日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650271037&idx=1&sn=74c9da72abdce6b59ab9900e39a39474&chksm=8fd24370b8a5ca667f7b191cf4196057ae7f93b7598d7a6ffadbd0ed031f618c81b145ecfc8c#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz_jpg/Penxjq6k4sdDNuJzd68LWicBUzUcQ17oicc076Bibkh1Mp1M7OOlngsrrcpLz3Fye8beu32hWNfQDgvPH85GOicficA/0?wx_fmt=jpeg\")",
+  "visit": 28,
+  "like": 9
+ },
+ {
+  "title": "[图文1]这不是一篇文章",
+  "time": "2016年10月26日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650271033&idx=1&sn=9b3487d146d68466a93306c4fe7073c6&chksm=8fd24374b8a5ca620ab6ae54850e9235099d41616ed8125515d3aa6868682fecc935a10f894a#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz_jpg/Penxjq6k4scvMIdHzT94iahC7X3CFo9jtsoqNGvAa6Y5d4thiaBpPvbUMJ9ac8jeNxl1xYWn2C15YwK91xjd0zUQ/0?wx_fmt=jpeg\")",
+  "visit": 26,
+  "like": 5
+ },
+ {
+  "title": "[图文1]我所向往的匠心",
+  "time": "2016年10月19日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650271029&idx=1&sn=9d5e2decdc810a6408b99b73406edfb5&chksm=8fd24378b8a5ca6ea06a9a04b9e1a8e698086bea09f642e8fc0d66fffa53982b84d7829c6f75#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz_jpg/Penxjq6k4sdOOeRuteZPAMibdBxYEmiar4wTS5UoYJHx0xml3bkfUQDcqyVYu1ICN3niaibj34H7FfqjicibE5pNkqRg/0?wx_fmt=jpeg\")",
+  "visit": 26,
+  "like": 6
+ },
+ {
+  "title": "[图文1]札记 | 与自己内心的非暴力沟通",
+  "time": "2016年10月12日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650271024&idx=1&sn=1e236b6d5ea17d9accb7f589f68e7def&chksm=8fd2437db8a5ca6b33a2fa58102e0ab0a11ab829fcf060ff1145c510e21a6c561aa996de010e#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz_jpg/Penxjq6k4seYJhnCBxWCqZvNjySia4dRUcDGjRHPa4mnWDme7d5icBgr3UbYIIaI2v5xkUMJJs3fvZW4sySWHU6g/0?wx_fmt=jpeg\")",
+  "visit": 50,
+  "like": 12
+ },
+ {
+  "title": "[图文1]不热闹的深夜独白",
+  "time": "2016年10月06日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650271021&idx=1&sn=8b0cd7e78650a5b678ec6de561a7d4d8&chksm=8fd24360b8a5ca760930196c3e4832d86b2012b6f7a3bc57e500428d02bc370523cff88b492d#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz_jpg/Penxjq6k4seicg5FficD8h3WT0kjJN1uw1rNtdic0Wia6I2O5jcKaBLIYAibdf27y2hLsVCjnicuwbye89ibLDVuVwHPg/0?wx_fmt=jpeg\")",
+  "visit": 32,
+  "like": 10
+ },
+ {
+  "title": "[图文1]札记 | 一把名为“泪”的茶勺",
+  "time": "2016年09月29日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650271018&idx=1&sn=1197820b7a62bcb08a928a5e77dee0e0&chksm=8fd24367b8a5ca7168483b5486cc33bc14f9f62700f4157ed4b8720404ab01bf7e3293052449#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz_jpg/Penxjq6k4scEVspFJatUiceDcsckpqaTcQWc5h6Qib3ogQeo6fSVLUvsUvkcsKds2aolRINQX560uVtiaBHFuzicvA/0?wx_fmt=jpeg\")",
+  "visit": 32,
+  "like": 9
+ },
+ {
+  "title": "[图文1]札记 | 杯水之间，狂波巨澜",
+  "time": "2016年09月22日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650271014&idx=1&sn=bdcdce8519cec0584cc19460fb195cdd&chksm=8fd2436bb8a5ca7dc6a40153a5167b03c0a3eb9d4b8bab535727f63d47a5bff97b4801feaf89#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz_jpg/Penxjq6k4seHW2UiaXEltHvvjYaDtYvENkbeTmn5hnsAtk7uAafSqSefiaZjlevkiaIiaXBn1yDkLV3cGDvmVok6Lw/0?wx_fmt=jpeg\")",
+  "visit": 48,
+  "like": 7
+ },
+ {
+  "title": "[图文1]日记的无用之用",
+  "time": "2016年09月14日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650271007&idx=1&sn=64865a33abce6ebe376d6c1a5a59e44d&chksm=8fd24352b8a5ca44b4a6bd606b15b55db29d30943a342f2390118e007ad094785c731f283645#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz_jpg/Penxjq6k4sePF3fDsj7upHw6Fh6PWk3O4lqqol1ACpHe38BGZXl32XQaZfcXmlBrIpMMZn7t0aibZI1HjtGa5oQ/0?wx_fmt=jpeg\")",
+  "visit": 81,
+  "like": 14
+ },
+ {
+  "title": "[图文1]遇上“我”，像遇上一朵雪花",
+  "time": "2016年09月07日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650271003&idx=1&sn=fc3f7d057b6b00859e2d9ef8699ee290#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz_jpg/Penxjq6k4sdqWNXos3NXbUPguMOuxrRiaUNj8sEyuhc8leBpWIrorSHSFTGFbqAHE059MTN9NJhdBicENRmYh69A/0?wx_fmt=jpeg\")",
+  "visit": 42,
+  "like": 7
+ },
+ {
+  "title": "[图文1]苦难 · 生活 · 希望",
+  "time": "2016年09月01日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270999&idx=1&sn=e2c814dbe782f4c51113dd50b322d36d#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz_jpg/Penxjq6k4scFnhfKXzPQ4icE1PcKCAmowVR7MZc2ySGChpBOFzwoAlXibIiavvszCmNYkuCpkwZ9T4ldz8uN5IJmA/0?wx_fmt=jpeg\")",
+  "visit": 34,
+  "like": 6
+ },
+ {
+  "title": "[图文1]札记 | 非黑即白与色彩斑斓",
+  "time": "2016年08月25日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270996&idx=1&sn=210d8a806a63d140a71de231d9e6562a#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz_jpg/Penxjq6k4scqUx7icctfaN3tibicBriasicYgiakmCSqX0X45IqmaP8icazYluUAXbsov2HoLdcsfWFY5YpztDU57pbJg/0?wx_fmt=jpeg\")",
+  "visit": 44,
+  "like": 4
+ },
+ {
+  "title": "[图文1]札记 | 生活在信息时代的远古人",
+  "time": "2016年08月17日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270992&idx=1&sn=bfe4420121f332d6ae43e505d650278d#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz_jpg/Penxjq6k4setggia2HGZ3ZHrM8ja4RTX6c7dNBGlq6n49PItEToz401csxkpibIfQ2DOUib8rxMHBjcejooQdTgYw/0?wx_fmt=jpeg\")",
+  "visit": 56,
+  "like": 4
+ },
+ {
+  "title": "[图文1]札记 | 听说路漫漫，其修远兮",
+  "time": "2016年08月11日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270988&idx=1&sn=7e46c3b14e4b4326005e9e757cd5814e#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4sdfZzibHwmwZZ4TWhgV4klMq9KSHvNwD94l375zzb64XLutEudYk7Bod3owj1kjoNAz06OKribC5mhg/0?wx_fmt=jpeg\")",
+  "visit": 24,
+  "like": 6
+ },
+ {
+  "title": "[图文1]生活只有一种英雄主义",
+  "time": "2016年08月03日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270985&idx=1&sn=f90602b1af40ae2931d52e8e5da3d2a2#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4sfRx57goDk9E38jakGhVLibDqeLxBW924YRqA2UIq74TII9xHg60PTJ5GPS0ujeRscLmJJGCuyyNBg/0?wx_fmt=jpeg\")",
+  "visit": 22,
+  "like": 5
+ },
+ {
+  "title": "[图文1]札记 | 游走在死亡世界里的文学",
+  "time": "2016年07月27日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270982&idx=1&sn=e16b9b9a1c1af9c9fcbc8cdf02f4b861#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4sdqCQy0Z5RRJfG90RZ6nhxV2a07YaMibmjwBKxziaC7oZV4dMC1LyEbr2iczPxJ6ujtXicPbSlrqeCs5A/0?wx_fmt=jpeg\")",
+  "visit": 47,
+  "like": 8
+ },
+ {
+  "title": "[图文1]札记 | 寻找命中注定的工作？",
+  "time": "2016年07月13日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270977&idx=1&sn=86f595f0308aee49d15c8a982cc20d43#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4scEOEvXgcuLjxWVHjdwVdXa4rx6ibiaDI3mA30ZrwkXYxJqNEf2sKqmrZemsNPQgH254Vkv0D6R5UHA/0?wx_fmt=jpeg\")",
+  "visit": 69,
+  "like": 9
+ },
+ {
+  "title": "[图文1]札记 | So Good They Can't Ingore You",
+  "time": "2016年06月30日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270971&idx=1&sn=9f2e48a857f5e9768f0672f4c9dfddbe#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4sez5B5HVeePlGqDNF7VcicGyMqZrMhxdeMjdt4zRMgsgxKoiaC36nZNTricraTb3NFnCGoSvfsZ6iawlg/0?wx_fmt=jpeg\")",
+  "visit": 23,
+  "like": 2
+ },
+ {
+  "title": "[图文1]札记 | Find Mr.Right",
+  "time": "2016年06月23日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270967&idx=1&sn=cbe27681a580ddd2f51e4a9b5aff407f#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4sfKKwrhZQ2aQ3ibdvQbsoakaxvZOeHtyOE3YaMk7PAHvQU8geAu4R2m8paVjlYpq8FtttA6tv8bhxw/0?wx_fmt=jpeg\")",
+  "visit": 18,
+  "like": 2
+ },
+ {
+  "title": "[图文1]新世相·图书馆的初次邂逅",
+  "time": "2016年06月16日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270959&idx=1&sn=c48f52a9a471034581c71473f651297e#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4sfblCToFmLKdBibDkOCSiakQ2htibwia8KjDn7Xmhic6Tbdrow66ZhQR3yfD6rGtNILACaH5ibntrr0oncA/0?wx_fmt=jpeg\")",
+  "visit": 58,
+  "like": 8
+ },
+ {
+  "title": "[图文1]呓语 | 青春疯狂，可还在回望？",
+  "time": "2016年06月09日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270956&idx=1&sn=bc130a1b03bfa49bf5058b29552852e6#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4seCpAY37icImibM2ZZwcryFrJLicG97ts2GBbpDBChucaxuaJV9D54qibAgZh4HTwVn5Qd22wt0odT6uA/0?wx_fmt=jpeg\")",
+  "visit": 16,
+  "like": 5
+ },
+ {
+  "title": "[图文1]呓语 | 谁对谁错，谁真谁假？",
+  "time": "2016年06月02日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270953&idx=1&sn=5274a989b2973f51d8d3e63c09714f51#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4scZ5ln04ic13lkLic8Jbx617g15CmQlFnbbJJybhNtndrVIDq3o7ruMC1BadmGTOB0Ribm3UpkKmpoxw/0?wx_fmt=jpeg\")",
+  "visit": 22,
+  "like": 4
+ },
+ {
+  "title": "[图文1]纸质书的别样使用场景",
+  "time": "2016年05月26日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270949&idx=1&sn=2bfe7c031da4e4528ca3c0703fd93952#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4sfqPiccks6QmO8Ev5L255OwS8sggZ9rmCS1xYM0de3bt7JbF5PG6WdETjK4kxNs5ID4h9C8tQS7Gdg/0?wx_fmt=jpeg\")",
+  "visit": 58,
+  "like": 5
+ },
+ {
+  "title": "[图文1]聊一聊我眼中的日本文化",
+  "time": "2016年05月19日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270946&idx=1&sn=1e047e0806b586e30de8d8f1658fc050#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4sf3wJaSfjyLahMGPv1mgGuBycLBSicvXSKWL5BL8wyoENnM8WPcA9BThicoiaCYcXQwvhk9caqf5yUVQ/0?wx_fmt=jpeg\")",
+  "visit": 21,
+  "like": 5
+ },
+ {
+  "title": "[图文1]札记 | 初读《茶馆之殇》",
+  "time": "2016年05月11日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270942&idx=1&sn=d12aed66589620a5ac85c32203ba1d34#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4sdWoibYOgOh6ngEEMpzRRN5qUBJQHMdQiakMUXWGw93nickZ36WOic71m2dLjFBGtXCdoe8YicB5Tm78yg/0?wx_fmt=jpeg\")",
+  "visit": 87,
+  "like": 8
+ },
+ {
+  "title": "[图文1]如何有策略的赞美和批评？",
+  "time": "2016年05月05日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270936&idx=1&sn=e5babe4c0b318669504a24f273b9b918#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4seTFLtNlBStv6NichWtrd5J9QS6RvFN14ndrVE7kQz0Aqs76DVib3bUEXvFicvxIbpHFjN5ZfnV4aiadA/0?wx_fmt=jpeg\")",
+  "visit": 40,
+  "like": 6
+ },
+ {
+  "title": "[图文1]问问时间都去了哪里",
+  "time": "2016年04月27日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270931&idx=1&sn=3ff56eaf68f418a1cc75380ff9626402#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4seTSdbgfjekte7NyepAAziav4G3rK51yjMQRuKVGwcEXIasR137pDVoxPo0ehxeicUmQpwylgPWaBibA/0?wx_fmt=jpeg\")",
+  "visit": 74,
+  "like": 7
+ },
+ {
+  "title": "[图文1]札记 | 一枚伪吃货的自我修养",
+  "time": "2016年04月20日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270924&idx=1&sn=9ced83331d6633e10130379608ea0d7f#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4sfr8ess2PlwDtyW55KSelyucTF7ibm6RFlRLykzSm8jeMJ5mib3A9K8sp31AwkPF2TMUTia2GCjxNgMA/0?wx_fmt=jpeg\")",
+  "visit": 38,
+  "like": 6
+ },
+ {
+  "title": "[图文1]札记 | 为什么总实现不了美好愿望",
+  "time": "2016年04月13日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270921&idx=1&sn=6fa044c8b4ad76a6641b4e02b69ebf22#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4scgicicrWYc4crd1vdHvb1FUq8rPpoDib1VD0GfgDwWQ4KYaOhDCIVPiaQjlnCzmeDXfOuwdVPk4WvE1A/0?wx_fmt=jpeg\")",
+  "visit": 31,
+  "like": 4
+ },
+ {
+  "title": "[图文1]去回忆里，为青春上炷香",
+  "time": "2016年04月06日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=2650270918&idx=1&sn=6454bed6ed2221ef5834daf848c7de30#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4sfGrrCPonC2nqiaETyIicd7ib9rbeiaJnvdoYQJ5onLGkKg9V4mq0gXTgPTBJwnnkweQJfDesy0ROL1FA/0?wx_fmt=jpeg\")",
+  "visit": 43,
+  "like": 2
+ },
+ {
+  "title": "[图文1]歪头看乡愁",
+  "time": "2016年02月09日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=402014081&idx=1&sn=f9d35f66f6b985c4cc5981898e2a3eb5#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4sd3GSv5FdHJ2nr7zsdRI7Z47R2AqgL04NudXIOpoiaAA9TnLshqBnRxUemJte4EiaStmhNztaJqVXrg/0?wx_fmt=jpeg\")",
+  "visit": 27,
+  "like": 2
+ },
+ {
+  "title": "[图文1]最怕回忆突然翻滚绞痛着不停息",
+  "time": "2016年01月31日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=401877631&idx=1&sn=70a28b8e3ccfc08fd01dfbc9cab5c362#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4sdv9OHRvEgjZOuOQxDb2WYzQ1ts40AbOxyibO5hWYtp8jVsJGM4t25yj4iaqqyD8cFakywUv0uLDUDA/0?wx_fmt=jpeg\")",
+  "visit": 37,
+  "like": 6
+ },
+ {
+  "title": "[图文1]致我们所缺少的匠人精神",
+  "time": "2016年01月05日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=401555284&idx=1&sn=d28118ab9a35c1df584fe9820d06bd3d#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4sdGFaLx8VdiblSzmghMus3AklSfQbNG90oQiabdmovf703FycICQdwbsIeaWwCpLwQYhmsa7IVEsITQ/0?wx_fmt=jpeg\")",
+  "visit": 17,
+  "like": 2
+ },
+ {
+  "title": "[图文1]两个人说话 = 四个人交流",
+  "time": "2016年01月04日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=401540274&idx=1&sn=90e95be8dd327a804e95656574d2493b#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4sdVxzvvnJtP3xeKgj06o273ya104gApwy8OX8OzLTEFZp1ickocUdgzwZuRq03mYibcuPBdDNkDQhng/0?wx_fmt=jpeg\")",
+  "visit": 24,
+  "like": 0
+ },
+ {
+  "title": "[图文1]这里最后的喜鹊是什么样？",
+  "time": "2016年01月03日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=401522368&idx=1&sn=ac6a879afc312a1e900806e148f30413#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4seLItGKeqymy44ugQqTPaccTlIQwBOqLgLFTBhxJ1O89QNPYtluAA3Z3ZxWmficib07WmoTP8VQZbDQ/0?wx_fmt=jpeg\")",
+  "visit": 10,
+  "like": 0
+ },
+ {
+  "title": "[图文1]关闭朋友圈只是开启改变的一种形式",
+  "time": "2016年01月02日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=401509470&idx=1&sn=09f3c8179bbd7ed7d4864a8fd294e56e#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4sdgakwakZjlrKImO5y22Lu6WrnzA2iaG4HOB5Z7NM99jnmrvz4s99Nob0454ToDY5R5N1Kof76Kkicw/0?wx_fmt=jpeg\")",
+  "visit": 63,
+  "like": 1
+ },
+ {
+  "title": "[图文1]新年 · 用自己的节奏去长大",
+  "time": "2016年01月01日",
+  "url": "http://mp.weixin.qq.com/s?__biz=MzIyMDEwOTYwMg==&mid=401491291&idx=1&sn=216e5e21af23e891ccd2e52f47faa1d5#rd",
+  "img": "url(\"https://mmbiz.qlogo.cn/mmbiz/Penxjq6k4sfOE1YtyOQIzTw9e6kx0IcEWDHSQnGU79YuhXX1cfoJGOZhKuxkwhbT9ECmkbpR8Y3COCWTFrJoSw/0?wx_fmt=jpeg\")",
+  "visit": 22,
+  "like": 3
+ }
+];
+</script>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">data</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="kr">const</span> <span class="nx">title</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">"[图文1]"</span><span class="p">,</span><span class="s2">""</span><span class="p">);</span>
+	<span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">url</span><span class="p">;</span>
+	<span class="k">return</span> <span class="err">`</span>
+		<span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">"${ url }"</span><span class="o">&gt;</span> <span class="nx">$</span><span class="p">{</span> <span class="nx">title</span> <span class="p">}</span> <span class="o">&lt;</span><span class="sr">/a&gt;&lt;/</span><span class="nx">li</span><span class="o">&gt;</span>
+	<span class="err">`</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="nx">data</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">''</span><span class="p">);</span>
+
+</code></pre>
+</div>
+
+<p>把链接整理输出出来：（这里遇到了一个坑，我不小心把 JS 写在了 <code class="highlighter-rouge">&lt;ul&gt;</code> 标签前面，结果加载不出来，我在 Console 里面运行却没问题，后来才发现是这个问题）</p>
+
+<ul id="burenao">
+here is the list of articles in 不热闹
+</ul>
+
+<script>
+data = data.map(item => {
+	const title = item.title.replace("[图文1]","");
+	const url = item.url;
+	return `
+		<li><a href="${ url }"> ${ title } </a></li>
+	`;
+});
+
+var list = document.getElementById("burenao");
+list.innerHTML = data.join('');
+</script>
+
+<p>哈哈，我可以为不热闹的文章们新安一个家了。另外在 Console 面板截了个图，除掉一篇删除的，去年一共推送了 38 篇文章，其中有两篇是好友友情支持的，还有两篇只写了几句话，剩下的 34 篇都是我原创完成。顺便附上 GitHub 的截图。</p>
+
+<p><img src="http://ofjku7mlm.bkt.clouddn.com/17-1-3/78346126-file_1483438759673_2378.png" alt="2016 年的不热闹的文章数据" /></p>
+
+<p><img src="http://ofjku7mlm.bkt.clouddn.com/17-1-3/48192782-file_1483438757303_13ffc.png" alt="2016 年的 GitHub 数据" /></p>
+
+
+		<link rel="stylesheet" href="/diary/css/typo.css">
+    </article>
+</div>
+
+	<footer>
+    <span class="copyright">© 2016-2017 Soyaine</span>
+    <div>
+        <p class="comment">
+			Theme designed by <a href="https://github.com/soyaine">Soyaine</a><br>
+			Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> and <a href="https://github.com">GitHub</a>
+		</p>
+        
+		<ul class="contact">
+            <li><a href="http://www.jianshu.com/users/5e66b8b6fdc9/latest_articles"><i class="fa fa-3x fa-book"></i></a></li>
+            <li><a href="https://github.com/soyaine"><i class="fa fa-3x fa-github"></i> </a> </li>
+            <li><a href="http://twitter.com/soyaine"><i class="fa fa-3x fa-twitter"></i> </a> </li>
+            <li><a href="mailto:soyaine1@gmail.com"><i class="fa fa-envelope fa-3x"></i></a></li>
+        </ul>
+	</div>
+</footer>
+</body>
+<!--<script type="text/javascript" src="/diary/js/calendar.js"></script>-->
+</html>

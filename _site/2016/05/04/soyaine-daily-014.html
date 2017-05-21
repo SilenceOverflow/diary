@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="/diary/css/main.css">
+    <link rel="stylesheet" href="/diary/css/calendar.css">
+    <link rel="stylesheet" href="/diary/css/font-awesome.min.css">
+    <title>所丫日报</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><i class="fa fa-paper-plane-o"></i></li>
+			<!--get the nav links in  _config.yml -->
+			
+			<li><a href="http://soyaine.cn">Home</a></li>
+			
+			<li><a href="http://soyaine.cn/diary/">Diary</a></li>
+			
+			<li><a href="http://soyaine.cn/read/">Read</a></li>
+			
+			<li><a href="http://soyaine.cn/FE-Practice/">Works</a></li>
+			
+			<li><a href="http://soyaine.cn/about.html">About</a></li>
+			
+        </ul>
+    </nav>
+
+    
+    <a id="oldPostBtn" class="btn nav-button" href="/diary/2016/05/03/soyaine-daily-013" title="上一篇"><i class="btn fa fa-3x fa-angle-left"></i></a>
+    
+
+    
+    <a id="nextPostBtn" class="btn nav-button" href="/diary/2016/05/05/soyaine-daily-015" title="下一篇"><i class="btn fa fa-3x fa-angle-right"></i></a>
+    
+</header>
+<div class="paper paper-before" id="paperBefore"></div>
+<div class="paper paper-article">
+    <!-- Date No. sign -->
+    <a href="#" title="点击查看日历">
+    <span id="openBtn" class="date-index">
+        No.
+        <!--Page NO.-->
+		014<br>
+		 <!--Date yyyy.mm.dd-->
+        2016-05-04
+    </span>
+    </a>
+	
+    <!--Calendar body-->
+    <!--日历组件-->
+<div id="calendar" class="calendar">
+
+    <i id="closeBtn" class="btn fa fa-close" style="display: block"></i>
+
+    <div id="cal-year" class="cal-year">
+        <i id="lastYearBtn" class="btn fa fa-angle-left"></i>
+        <label>2017</label>
+        <i id="nextYearBtn" class="btn fa fa-angle-right"></i>
+    </div>
+
+    <div id="dateTable" class="cal-body">
+
+        <ul id="cal-month" class="cal-month">
+            <li title="0">Jan</li>
+            <li title="1">Feb</li>
+            <li title="2">Mar</li>
+            <li title="3">Apr</li>
+            <li title="4">May</li>
+            <li title="5">Jun</li>
+            <li title="6">Jul</li>
+            <li title="7">Aug</li>
+            <li title="8">Sep</li>
+            <li title="9">Oct</li>
+            <li title="10">Nov</li>
+            <li title="11" class="cal-this-month">Dec</li>
+        </ul>
+
+        <ul id="cal-week" class="cal-body cal-week">
+            <li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li>
+        </ul>
+
+        <ul id="cal-day1" class="cal-body cal-body-day">
+            <li id="2016/11/27" class="cal-day">27</li>
+            <li id="2016/11/28" class="cal-day">28</li>
+            <li id="2016/11/29" class="cal-day">29</li>
+            <li id="2016/11/30" class="cal-day"><a href="#">30</a></li>
+            <li id="2016/12/1" class="cal-day">1</li>
+            <li id="2016/12/2" class="cal-day cal-now">2</li>
+            <li id="2016/12/3" class="cal-day">3</li>
+        </ul>
+        <ul id="cal-day2" class="cal-body cal--body-day">
+            <li id="2016/12/4" class="cal-day">4</li>
+            <li id="2016/12/5" class="cal-day">5</li>
+            <li id="2016/12/6" class="cal-day">6</li>
+            <li id="2016/12/7" class="cal-day">7</li>
+            <li id="2016/12/8" class="cal-day">8</li>
+            <li id="2016/12/9" class="cal-day">9</li>
+            <li id="2016/12/10" class="cal-day">10</li>
+        </ul>
+        <ul id="cal-day3" class="cal-body cal-body-day">
+            <li id="2016/12/11" class="cal-day">11</li>
+            <li id="2016/12/12" class="cal-day">12</li>
+            <li id="2016/12/13" class="cal-day">13</li>
+            <li id="2016/12/14" class="cal-day">14</li>
+            <li id="2016/12/15" class="cal-day">15</li>
+            <li id="2016/12/16" class="cal-day">16</li>
+            <li id="2016/12/17" class="cal-day">17</li>
+        </ul>
+        <ul id="cal-day4" class="cal-body cal-body-day">
+            <li id="2016/12/18" class="cal-day">18</li>
+            <li id="2016/12/19" class="cal-day">19</li>
+            <li id="2016/12/20" class="cal-day">20</li>
+            <li id="2016/12/21" class="cal-day">21</li>
+            <li id="2016/12/22" class="cal-day">22</li>
+            <li id="2016/12/23" class="cal-day">23</li>
+            <li id="2016/12/24" class="cal-day">24</li>
+        </ul>
+        <ul id="cal-day5" class="cal-body cal-body-day">
+            <li id="2016/12/25" class="cal-day">25</li>
+            <li id="2016/12/26" class="cal-day">26</li>
+            <li id="2016/12/27" class="cal-day">27</li>
+            <li id="2016/12/28" class="cal-day">28</li>
+            <li id="2016/12/29" class="cal-day">29</li>
+            <li id="2016/12/30" class="cal-day">30</li>
+            <li id="2016/12/31" class="cal-day">31</li>
+        </ul>
+        <ul id="cal-day6" class="cal-body cal-body-day">
+            <li id="2017/1/1" class="cal-day">1</li>
+            <li id="2017/1/2" class="cal-day">2</li>
+            <li id="2017/1/3" class="cal-day">3</li>
+            <li id="2017/1/4" class="cal-day">4</li>
+            <li id="2017/1/5" class="cal-day">5</li>
+            <li id="2017/1/6" class="cal-day">6</li>
+            <li id="2017/1/7" class="cal-day">7</li>
+        </ul>
+    </div>
+
+</div>
+
+
+<script>
+    var urlJSON = {
+    
+    "2017/5/13": {
+        url: "/diary/2017/05/13/soyaine-daily-118" ,
+                excerpt: ""
+    },
+    
+    "2017/5/12": {
+        url: "/diary/2017/05/12/soyaine-daily-117" ,
+                excerpt: ""
+    },
+    
+    "2017/5/11": {
+        url: "/diary/2017/05/11/soyaine-daily-116" ,
+                excerpt: ""
+    },
+    
+    "2017/5/9": {
+        url: "/diary/2017/05/09/soyaine-daily-115" ,
+                excerpt: ""
+    },
+    
+    "2017/5/8": {
+        url: "/diary/2017/05/08/soyaine-daily-114" ,
+                excerpt: ""
+    },
+    
+    "2017/5/7": {
+        url: "/diary/2017/05/07/soyaine-daily-113" ,
+                excerpt: ""
+    },
+    
+    "2017/5/6": {
+        url: "/diary/2017/05/06/soyaine-daily-112" ,
+                excerpt: ""
+    },
+    
+    "2017/5/5": {
+        url: "/diary/2017/05/05/soyaine-daily-111" ,
+                excerpt: ""
+    },
+    
+    "2017/5/4": {
+        url: "/diary/2017/05/04/soyaine-daily-110" ,
+                excerpt: ""
+    },
+    
+    "2017/5/3": {
+        url: "/diary/2017/05/03/soyaine-daily-109" ,
+                excerpt: ""
+    },
+    
+    "2017/5/2": {
+        url: "/diary/2017/05/02/soyaine-daily-108" ,
+                excerpt: ""
+    },
+    
+    "2017/5/1": {
+        url: "/diary/2017/05/01/soyaine-daily-107" ,
+                excerpt: ""
+    },
+    
+    "2017/4/30": {
+        url: "/diary/2017/04/30/soyaine-daily-106" ,
+                excerpt: ""
+    },
+    
+    "2017/4/28": {
+        url: "/diary/2017/04/28/soyaine-daily-105" ,
+                excerpt: ""
+    },
+    
+    "2017/4/27": {
+        url: "/diary/2017/04/27/soyaine-daily-104" ,
+                excerpt: ""
+    },
+    
+    "2017/4/25": {
+        url: "/diary/2017/04/25/soyaine-daily-103" ,
+                excerpt: ""
+    },
+    
+    "2017/4/24": {
+        url: "/diary/2017/04/24/soyaine-daily-102" ,
+                excerpt: ""
+    },
+    
+    "2017/4/23": {
+        url: "/diary/2017/04/23/soyaine-daily-101" ,
+                excerpt: ""
+    },
+    
+    "2017/4/22": {
+        url: "/diary/2017/04/22/soyaine-daily-100" ,
+                excerpt: ""
+    },
+    
+    "2017/4/21": {
+        url: "/diary/2017/04/21/soyaine-daily-099" ,
+                excerpt: ""
+    },
+    
+    "2017/4/20": {
+        url: "/diary/2017/04/20/soyaine-daily-098" ,
+                excerpt: ""
+    },
+    
+    "2017/4/19": {
+        url: "/diary/2017/04/19/soyaine-daily-097" ,
+                excerpt: "开发手记"
+    },
+    
+    "2017/4/18": {
+        url: "/diary/2017/04/18/soyaine-daily-096" ,
+                excerpt: ""
+    },
+    
+    "2017/4/17": {
+        url: "/diary/2017/04/17/soyaine-daily-095" ,
+                excerpt: ""
+    },
+    
+    "2017/4/16": {
+        url: "/diary/2017/04/16/soyaine-daily-094" ,
+                excerpt: "GDG-Women Techmakers 北京站的一些记录 + About更新记录"
+    },
+    
+    "2017/4/15": {
+        url: "/diary/2017/04/15/soyaine-daily-093" ,
+                excerpt: ""
+    },
+    
+    "2017/4/14": {
+        url: "/diary/2017/04/14/soyaine-daily-092" ,
+                excerpt: ""
+    },
+    
+    "2017/4/13": {
+        url: "/diary/2017/04/13/soyaine-daily-091" ,
+                excerpt: ""
+    },
+    
+    "2017/4/12": {
+        url: "/diary/2017/04/12/soyaine-daily-090" ,
+                excerpt: ""
+    },
+    
+    "2017/3/31": {
+        url: "/diary/2017/03/31/soyaine-daily-089" ,
+                excerpt: ""
+    },
+    
+    "2017/3/24": {
+        url: "/diary/2017/03/24/soyaine-daily-088" ,
+                excerpt: "强行凑字数的五连击♪(^∇^*)"
+    },
+    
+    "2017/3/23": {
+        url: "/diary/2017/03/23/soyaine-daily-087" ,
+                excerpt: "新的旅程开始了~"
+    },
+    
+    "2017/3/22": {
+        url: "/diary/2017/03/22/soyaine-daily-086" ,
+                excerpt: "好久好久没练习，去吹笛子晃悠了一圈，很治愈。看完《四重奏》大结局，很温馨。"
+    },
+    
+    "2017/3/21": {
+        url: "/diary/2017/03/21/soyaine-daily-085" ,
+                excerpt: "偶遇之喜"
+    },
+    
+    "2017/3/20": {
+        url: "/diary/2017/03/20/soyaine-daily-084" ,
+                excerpt: "据说今天是国际幸福日，召唤了一次图片精灵"
+    },
+    
+    "2017/3/19": {
+        url: "/diary/2017/03/19/soyaine-daily-083" ,
+                excerpt: "ECharts 中箱线图的数据问题"
+    },
+    
+    "2017/3/18": {
+        url: "/diary/2017/03/18/soyaine-daily-082" ,
+                excerpt: ""
+    },
+    
+    "2017/2/24": {
+        url: "/diary/2017/02/24/soyaine-daily-081" ,
+                excerpt: ""
+    },
+    
+    "2017/2/22": {
+        url: "/diary/2017/02/22/soyaine-daily-080" ,
+                excerpt: ""
+    },
+    
+    "2017/1/11": {
+        url: "/diary/2017/01/11/soyaine-daily-079" ,
+                excerpt: ""
+    },
+    
+    "2017/1/10": {
+        url: "/diary/2017/01/10/soyaine-daily-078" ,
+                excerpt: "Diary 更新日志，TransChart 项目进程记录"
+    },
+    
+    "2017/1/9": {
+        url: "/diary/2017/01/09/soyaine-daily-077" ,
+                excerpt: "TransChart 项目进程记录，阅读记录：EJS Jade MVC MVVM"
+    },
+    
+    "2017/1/8": {
+        url: "/diary/2017/01/08/soyaine-daily-076" ,
+                excerpt: ""
+    },
+    
+    "2017/1/7": {
+        url: "/diary/2017/01/07/soyaine-daily-075" ,
+                excerpt: ""
+    },
+    
+    "2017/1/6": {
+        url: "/diary/2017/01/06/soyaine-daily-074" ,
+                excerpt: ""
+    },
+    
+    "2017/1/3": {
+        url: "/diary/2017/01/03/soyaine-daily-073" ,
+                excerpt: ""
+    },
+    
+    "2017/1/2": {
+        url: "/diary/2017/01/02/soyaine-daily-072" ,
+                excerpt: "The Impossible Dream (The Quest)"
+    },
+    
+    "2017/1/1": {
+        url: "/diary/2017/01/01/soyaine-daily-071" ,
+                excerpt: ""
+    },
+    
+    "2016/12/31": {
+        url: "/diary/2016/12/31/soyaine-daily-070" ,
+                excerpt: "关于 GitHub 图片加载的问题手记，关于 HTTP header 中的 Content-Length"
+    },
+    
+    "2016/12/29": {
+        url: "/diary/2016/12/29/soyaine-daily-069" ,
+                excerpt: ""
+    },
+    
+    "2016/12/28": {
+        url: "/diary/2016/12/28/soyaine-daily-068" ,
+                excerpt: ""
+    },
+    
+    "2016/12/27": {
+        url: "/diary/2016/12/27/soyaine-daily-067" ,
+                excerpt: ""
+    },
+    
+    "2016/12/25": {
+        url: "/diary/2016/12/25/soyaine-daily-066" ,
+                excerpt: ""
+    },
+    
+    "2016/12/24": {
+        url: "/diary/2016/12/24/soyaine-daily-065" ,
+                excerpt: ""
+    },
+    
+    "2016/12/23": {
+        url: "/diary/2016/12/23/soyaine-daily-064" ,
+                excerpt: ""
+    },
+    
+    "2016/12/22": {
+        url: "/diary/2016/12/22/soyaine-daily-063" ,
+                excerpt: "学习笔记"
+    },
+    
+    "2016/12/21": {
+        url: "/diary/2016/12/21/soyaine-daily-062" ,
+                excerpt: ""
+    },
+    
+    "2016/12/20": {
+        url: "/diary/2016/12/20/soyaine-daily-061" ,
+                excerpt: "JavaScript30 begin"
+    },
+    
+    "2016/12/11": {
+        url: "/diary/2016/12/11/soyaine-daily-060" ,
+                excerpt: ""
+    },
+    
+    "2016/12/10": {
+        url: "/diary/2016/12/10/soyaine-daily-059" ,
+                excerpt: ""
+    },
+    
+    "2016/12/9": {
+        url: "/diary/2016/12/09/soyaine-daily-058" ,
+                excerpt: "看了《你的名字》"
+    },
+    
+    "2016/12/8": {
+        url: "/diary/2016/12/08/soyaine-daily-057" ,
+                excerpt: "something about liquid"
+    },
+    
+    "2016/12/7": {
+        url: "/diary/2016/12/07/soyaine-daily-056" ,
+                excerpt: ""
+    },
+    
+    "2016/12/6": {
+        url: "/diary/2016/12/06/soyaine-daily-055" ,
+                excerpt: "意外重新发现 Chain"
+    },
+    
+    "2016/12/5": {
+        url: "/diary/2016/12/05/soyaine-daily-054" ,
+                excerpt: ""
+    },
+    
+    "2016/12/4": {
+        url: "/diary/2016/12/04/soyaine-daily-053" ,
+                excerpt: "初步完成 diary 的雏形，看《我，堂吉诃德》的音乐剧"
+    },
+    
+    "2016/12/3": {
+        url: "/diary/2016/12/03/soyaine-daily-052" ,
+                excerpt: ""
+    },
+    
+    "2016/12/2": {
+        url: "/diary/2016/12/02/soyaine-daily-051" ,
+                excerpt: ""
+    },
+    
+    "2016/9/27": {
+        url: "/diary/2016/09/27/soyaine-daily-050" ,
+                excerpt: "版式设计的学习"
+    },
+    
+    "2016/7/12": {
+        url: "/diary/2016/07/12/soyaine-daily-049" ,
+                excerpt: "简单的每日总结"
+    },
+    
+    "2016/7/11": {
+        url: "/diary/2016/07/11/soyaine-daily-048" ,
+                excerpt: "零散的感想总结"
+    },
+    
+    "2016/6/30": {
+        url: "/diary/2016/06/30/soyaine-daily-047" ,
+                excerpt: ""
+    },
+    
+    "2016/6/29": {
+        url: "/diary/2016/06/29/soyaine-daily-046" ,
+                excerpt: ""
+    },
+    
+    "2016/6/28": {
+        url: "/diary/2016/06/28/soyaine-daily-045" ,
+                excerpt: ""
+    },
+    
+    "2016/6/14": {
+        url: "/diary/2016/06/14/soyaine-daily-044" ,
+                excerpt: "其他想法"
+    },
+    
+    "2016/6/13": {
+        url: "/diary/2016/06/13/soyaine-daily-043" ,
+                excerpt: "学习笔记"
+    },
+    
+    "2016/6/11": {
+        url: "/diary/2016/06/11/soyaine-daily-042" ,
+                excerpt: "反思"
+    },
+    
+    "2016/6/9": {
+        url: "/diary/2016/06/09/soyaine-daily-041" ,
+                excerpt: "学习笔记 JavaScript下拉框选值"
+    },
+    
+    "2016/6/5": {
+        url: "/diary/2016/06/05/soyaine-daily-040" ,
+                excerpt: "求职进展"
+    },
+    
+    "2016/6/4": {
+        url: "/diary/2016/06/04/soyaine-daily-039" ,
+                excerpt: "求职进程"
+    },
+    
+    "2016/6/3": {
+        url: "/diary/2016/06/03/soyaine-daily-038" ,
+                excerpt: "关于日报，话语摘录，学习笔记，求职进程"
+    },
+    
+    "2016/6/1": {
+        url: "/diary/2016/06/01/soyaine-daily-037" ,
+                excerpt: "学习汇报"
+    },
+    
+    "2016/5/31": {
+        url: "/diary/2016/05/31/soyaine-daily-036" ,
+                excerpt: "学习汇报"
+    },
+    
+    "2016/5/30": {
+        url: "/diary/2016/05/30/soyaine-daily-035" ,
+                excerpt: "读书心得《天龙八部》，学习进程"
+    },
+    
+    "2016/5/29": {
+        url: "/diary/2016/05/29/soyaine-daily-034" ,
+                excerpt: "学习汇报，其他想法，读书心得"
+    },
+    
+    "2016/5/28": {
+        url: "/diary/2016/05/28/soyaine-daily-033" ,
+                excerpt: "生活的思考，学习笔记 CSS Transform"
+    },
+    
+    "2016/5/25": {
+        url: "/diary/2016/05/25/soyaine-daily-032" ,
+                excerpt: "知乎掠影，读书心得"
+    },
+    
+    "2016/5/24": {
+        url: "/diary/2016/05/24/soyaine-daily-031" ,
+                excerpt: "关于日报，学习笔记，其他想法"
+    },
+    
+    "2016/5/23": {
+        url: "/diary/2016/05/23/soyaine-daily-030" ,
+                excerpt: "关于日报 关于网站 其他想法"
+    },
+    
+    "2016/5/22": {
+        url: "/diary/2016/05/22/soyaine-daily-029" ,
+                excerpt: "两句勉励自己的话"
+    },
+    
+    "2016/5/20": {
+        url: "/diary/2016/05/20/soyaine-daily-028" ,
+                excerpt: "学习笔记 CSS绘图"
+    },
+    
+    "2016/5/18": {
+        url: "/diary/2016/05/18/soyaine-daily-027" ,
+                excerpt: "总结"
+    },
+    
+    "2016/5/17": {
+        url: "/diary/2016/05/17/soyaine-daily-026" ,
+                excerpt: "睡前随想"
+    },
+    
+    "2016/5/16": {
+        url: "/diary/2016/05/16/soyaine-daily-025" ,
+                excerpt: "学习笔记 居中心得、类图"
+    },
+    
+    "2016/5/15": {
+        url: "/diary/2016/05/15/soyaine-daily-024" ,
+                excerpt: "学习笔记 居中，其他想法"
+    },
+    
+    "2016/5/14": {
+        url: "/diary/2016/05/14/soyaine-daily-023" ,
+                excerpt: "学习笔记 CSS布局-position float z-index，其他想法"
+    },
+    
+    "2016/5/13": {
+        url: "/diary/2016/05/13/soyaine-daily-022" ,
+                excerpt: "时间管理，读书心得《奇特的一生》，关于日报，其他想法"
+    },
+    
+    "2016/5/11": {
+        url: "/diary/2016/05/11/soyaine-daily-021" ,
+                excerpt: "读书心得《茶馆之殇》，其他想法"
+    },
+    
+    "2016/5/10": {
+        url: "/diary/2016/05/10/soyaine-daily-020" ,
+                excerpt: "读书心得《茶馆之殇》，其他想法"
+    },
+    
+    "2016/5/9": {
+        url: "/diary/2016/05/09/soyaine-daily-019" ,
+                excerpt: "其他想法"
+    },
+    
+    "2016/5/8": {
+        url: "/diary/2016/05/08/soyaine-daily-018" ,
+                excerpt: "学习笔记，其他想法"
+    },
+    
+    "2016/5/7": {
+        url: "/diary/2016/05/07/soyaine-daily-017" ,
+                excerpt: "学习笔记，其他想法"
+    },
+    
+    "2016/5/6": {
+        url: "/diary/2016/05/06/soyaine-daily-016" ,
+                excerpt: "学习笔记，观剧心得，读书心得"
+    },
+    
+    "2016/5/5": {
+        url: "/diary/2016/05/05/soyaine-daily-015" ,
+                excerpt: "其他想法 读书心得 观影心得"
+    },
+    
+    "2016/5/4": {
+        url: "/diary/2016/05/04/soyaine-daily-014" ,
+                excerpt: "读书心得，阅读《成功，动机与目标》 "
+    },
+    
+    "2016/5/3": {
+        url: "/diary/2016/05/03/soyaine-daily-013" ,
+                excerpt: "关于日报，学习笔记 CSS盒模型，IFE Practice，阅读，运动"
+    },
+    
+    "2016/5/2": {
+        url: "/diary/2016/05/02/soyaine-daily-012" ,
+                excerpt: "学习笔记 CSS 盒模型"
+    },
+    
+    "2016/5/1": {
+        url: "/diary/2016/05/01/soyaine-daily-011" ,
+                excerpt: "观剧心得《Legal High》第 8、11 集，读书心得《成功，动机与目标》，关于日报，行动反思"
+    },
+    
+    "2016/4/30": {
+        url: "/diary/2016/04/30/soyaine-daily-010" ,
+                excerpt: "观剧心得《Legal High》第 7 集，读书心得《成功，动机与目标》《MacTalk 跨越边界》，其他想法 Coursera - Learn How to Learn"
+    },
+    
+    "2016/4/29": {
+        url: "/diary/2016/04/29/soyaine-daily-009" ,
+                excerpt: "观剧心得《Legal High》第 6 集，读书心得《成功，动机与目标》"
+    },
+    
+    "2016/4/28": {
+        url: "/diary/2016/04/28/soyaine-daily-008" ,
+                excerpt: "观剧心得《Legal High》第 5 集，读书心得《成功，动机与目标》"
+    },
+    
+    "2016/4/27": {
+        url: "/diary/2016/04/27/soyaine-daily-007" ,
+                excerpt: "观剧心得《Legal High》第2、3、4集，学习心得「元」CMS"
+    },
+    
+    "2016/4/26": {
+        url: "/diary/2016/04/26/soyaine-daily-006" ,
+                excerpt: "阅读心得《奖赏会伤人》、Learn How to Learn、 TED、 高情商的人如何在沟通中化险为夷？，关于公众号"
+    },
+    
+    "2016/4/25": {
+        url: "/diary/2016/04/25/soyaine-daily-005" ,
+                excerpt: "关于日报，随思随想，阅读心得，观剧心得《琅琊榜》《未生》第 19 集"
+    },
+    
+    "2016/4/24": {
+        url: "/diary/2016/04/24/soyaine-daily-004" ,
+                excerpt: "关于日报，关于技能，关于生活"
+    },
+    
+    "2016/4/23": {
+        url: "/diary/2016/04/23/soyaine-daily-003" ,
+                excerpt: "读书心得《把时间当做朋友》"
+    },
+    
+    "2016/4/22": {
+        url: "/diary/2016/04/22/soyaine-daily-002" ,
+                excerpt: "关于技能 Python抓数据"
+    },
+    
+    "2016/4/21": {
+        url: "/diary/2016/04/21/soyaine-daily-001" ,
+                excerpt: "关于日报，读书札记《把时间当做朋友》，关于技能 CSS，其他内容 小狼毫/鼠须管"
+    },
+    
+    "2015/6/12": {
+        url: "/diary/2015/06/12/hello-aoao" ,
+                excerpt: "Hello World"
+    },
+    
+    "end": "end"
+    };
+</script>
+<script type="text/javascript" src="/diary/js/calendar.js"></script>
+
+    <!--Article body-->
+    <article class="typo">
+        <link rel="stylesheet" href="/diary/css/syntax.css">
+<link rel="stylesheet" href="/diary/css/typo.css">
+<h2 id="读书心得">读书心得</h2>
+
+<p>今天大部分时间用于看《成功，动机与目标》了，要写好一篇读书心得的确需要努力。不断尝试，再进步。</p>
+
+<p>下午的时候看到了一本无印良品设计师的书《设计中的设计》觉得很棒。</p>
+
+<h2 id="阅读成功动机与目标">阅读《成功，动机与目标》</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>2016-05-04-07:20</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="摘抄-第-3-章-你注重出色表现还是成长进步">摘抄 第 3 章 你注重出色表现还是成长进步</h3>
+
+<h4 id="p60-引">p.60 引</h4>
+
+<blockquote>
+  <p>你的聪明程度能影响你做一件事时感受到的难度，比如，一道数学题要多难才能让你感觉到有困难，但完全无法决定你解决困难的方式，也无妨决定你是会坚持不懈还是会感到疲倦和无助。</p>
+</blockquote>
+
+<p>这一章借鉴了很多《看见成长的自己》里的内容，两种类型，</p>
+
+<p>表现型：注重良好的表现从而体现能力</p>
+
+<p>进步型：注重进步、成长以及精通某种手艺或学问</p>
+
+<h4 id="p60-当表现是你的目标时">p.60 当「表现」是你的目标时</h4>
+
+<blockquote>
+  <p>心理学家把「表现」的意愿叫做「绩效目标」——展示自己聪明、有才、有能力或业绩优于他人。</p>
+
+  <p>当你追求「绩效目标」时，你的精力被指引到获得一个特定结果上。</p>
+
+  <p>我们之所以会选择这样的目标是因为我们认为达到这个目标能给我们带来某种肯定，会使我们看上去或自我感觉起来聪明、有才华、很抢手，然后我们用是否成功来评判自己。</p>
+
+  <p>绩效目标都有一个「全或无」的特征——你要么达标要么不达标，非输即赢。</p>
+
+  <p>当你只在乎「表现好」时，「差不多好」和「大部分好」一点都不能带来安慰。</p>
+</blockquote>
+
+<p>这大概可以微微解释，为什么一些学习成绩优秀的人没有拿到第一的时候会很沮丧，因为这对他们来说，意味着自己「不够好」，而无论是「有点好」、「很好」、「非常好」在他们那里都等于「好」的对立面。</p>
+
+<blockquote>
+  <p>当「在某堂课上拿 A 并证明自己聪明」是我的目标时，如果一次考试没有得到 A 我就难免觉得自己不聪明，不是吗？得出「也许我不够聪明」的结论会带来几种不同影响，<strong>但没有一种是好的</strong>。</p>
+
+  <p>首先我会感觉很糟——大概会焦虑和沮丧，也有可能感到难堪和耻辱。我的自我价值感和自尊心会受到折磨。我的自信会被动摇——如果还没完全破碎的话。</p>
+
+  <p>如果我不够聪明，继续努力也是徒劳，那我还不如放弃呢，不需要再为后面的考试费心思了。</p>
+</blockquote>
+
+<blockquote>
+  <p>当你追求「表现」目标时，你会成为「自我应验预言」的受害者，相信自己不行，于是停止尝试，于是注定失败——这结果当然会（错误地）应验「我不行」的最初想法。所以不难想象，绩效目标也能导致最低的成就，同时还伴随着大剂量的失望和自我怀疑。</p>
+</blockquote>
+
+<p>要把这大剂量的失望和自我怀疑消化掉是一件很不容易的事情，不知道为什么我看到这里很容易想到高考和中考的事情，在这样考试的条件下，难免会被同化或者说被环境导向成一个「表现型」人，于是一旦有一次模拟考出现了问题，或者是发生任何的让人失望的事情，会带给自己莫大的怀疑感，不得不说这份怀疑感可以持续一年或者好几年，对我来说真正造成影响的可能就是这份自我怀疑，不仅存在于考试之上，还会逐渐衍生到生活的方方面面去，无影杀手。</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>2016-05-04-07:55</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>2016-05-04-09:00</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="当进步是你的目标时">当「进步」是你的目标时</h4>
+
+<blockquote>
+  <p>心理学家把发展或增强某种技术和能力的意愿称作「精熟目标」。</p>
+
+  <p>当人们在追求精熟目标时，他们不因是否达到特定结果而评断自己——比如成绩全 A 或超越销售目标。取而代之，他们用「进步」来评断自己。</p>
+
+  <p>我有进步吗？我在学东西吗？我前进的速度适当吗？</p>
+
+  <p>重点不是一次的表现，而是长期表现。</p>
+
+  <p>这种目标是以完全不同的方式与自我价值关联起来的，因为它们着重于自我提升而不是自我肯定。这种目标关系到你是否做出了最大努力成为最好最有能力的自己，而不是证明你已经是最好的了。</p>
+</blockquote>
+
+<blockquote>
+  <p>当我们追求精熟目标（「进步」）时，我们比较不会因为困难和差强人意的成绩而埋怨自己缺乏能力，因为这样做根本没有道理。我当然目前缺乏能力了——我还没有掌握它啊！</p>
+
+  <p>我们会找更可控的原因。我学习够下功夫吗？我是否应该换个战略？我是否应该找个高手请教一下？</p>
+
+  <p>当人们在追求「进步」的路上遇到困难时，他们不会像追求「表现」的人那样沮丧和无助，他们会做出行动。他们问自己哪里出了错然后去修复。</p>
+
+  <p>「进步」目标有时能带来最大的成就，因为把注意力集中在「进步」上的人很少会过早放弃。</p>
+</blockquote>
+
+<h4 id="p64-哪种目标对我更有益">p.64 哪种目标对我更有益</h4>
+
+<p>「表现」略比「进步」有益的情况：</p>
+
+<blockquote>
+  <p>想证明自己聪明或有价值的人往往会用极大的精力和强度去做一件是——有现实奖励时尤其如此。</p>
+
+  <p>对于那些注重施展能力的人来说，若是高能力还能带来诱人的奖励，那他们会更有动力。</p>
+
+  <p>追求「表现」目标能在很多各式各样的任务中引领你取得好成绩。但在大部分这样的实验里，参与者明显没有感觉到挑战性——题目和游戏都比较简单，那些课程也很容易，大部分学生都能拿高分。</p>
+
+  <p>所以在你做比较简单的事时，注重于出色的表现，证明自己强大可能会是很有效的方式。</p>
+</blockquote>
+
+<h4 id="p64-面对困难">p.64 面对困难</h4>
+
+<p>「进步」比「表现」更有用的情况：</p>
+
+<p>实验是根据灌输不同的目标而进行对比，并变化题目难度、进行打扰占用时间。</p>
+
+<blockquote>
+  <p>在这些实验里我们发现，那些怀有「进步」目标的人们没有被题目难度变化所干扰。不论我们做什么，他们在简单和复杂的情形中表现得同样好，但「表现」目标组里则呈现出截然不同的景象，困难和障碍眼中影响了他们的解题水平。</p>
+</blockquote>
+
+<p>从这里可以看出，面对现实之中复杂多变——接二连三的意外发生——的情况时，「进步」类目标可以更好的保持自己的进步的节奏，而不被外在环境轻易影响。</p>
+
+<p>作者提到前文所述的一个现象：「对成功的期望值在很大程度上影响着动力」，「当人们相信自己能把一件事做好时往往就真能做好」，而这种现象在「表现」类目标中更明显。</p>
+
+<blockquote>
+  <p>当你聚焦在「进步」而不是「表现」时，你会从两方面受益。</p>
+
+  <p>第一，当事情变复杂时——复杂的情形、时间的压力、重重的障碍或意外的挑战——你不会垂头丧气，你更倾向于相信坚持就是胜利。</p>
+
+  <p>第二，当你开始怀疑自己的表现时，你并不会因此而失去动力，因为虽然成功很难，但你仍可以从过程中学习，进步也完全可能的。</p>
+</blockquote>
+
+<blockquote>
+  <p>所以当一项工作有难度，<strong>坚持不懈</strong>是取得高成就的<strong>关键</strong>时，追求「进步」的精熟目标具有明显优势。</p>
+</blockquote>
+
+<h4 id="p68-坚韧不拔与医学预科">p.68 坚韧不拔与医学预科</h4>
+
+<p>举了实际情况中的例子，医学预科是进医学院之前需要进修的课程，作者称这对很多顶级院校的学生而言是「他们有生以来接触过的第一堂真正有难度的课程」。他们通过观察目标和整学期的成绩发现：</p>
+
+<blockquote>
+  <p>那些积极追求「进步」目标的学生总成绩更好，而这好成绩恰恰是因每次考试都在进步而获得的。</p>
+
+  <p>实际上，「进步」目标并没有带来多高的首次考试成绩，它的益处是在接下来的考试中体现的。</p>
+
+  <p>那些注重通过成绩证明自己的学生则体现出相反的规律——他们的表现呈退步状，尤其是在首次考试成绩不佳的情况下。</p>
+</blockquote>
+
+<table>
+  <tbody>
+    <tr>
+      <td>2016-05-04-09:46</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>2016-05-04-12:55</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="p69-享受过程">p.69 享受过程</h4>
+
+<p>通过「进步」型目标来使自己目标与结果并重，鱼与熊掌兼得。</p>
+
+<blockquote>
+  <p>心理学家在数项实验中均发现，追求「进步」的人能在工作学习中找到更多的乐趣。他们高度关注过程，有参与感，从个人角度重视学到的东西。</p>
+
+  <p>在为目标奋斗的过程中找到乐趣本身就是件好事，但这还不是全部的意义。对科目感兴趣的学生更会积极而非消极地参与到学习中来。</p>
+
+  <p>对科目感兴趣的学生更有可能提出自己的疑问然后寻找答案。他们运用的是更深层面的信息处理策略，比如寻找学习内容里的主题、关联以及基本原理，而不是表面信息处理。</p>
+
+  <p>如果你选择以「进步」为目标，你会更享受奋斗过程，从而能获取更大的成功。</p>
+</blockquote>
+
+<table>
+  <tbody>
+    <tr>
+      <td>2016-05-04-13:05</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>2016-05-04-13:10</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="摘抄-第-13-章-给予适当反馈批评和表扬的策略">摘抄 第 13 章 给予适当反馈——批评和表扬的策略</h3>
+
+<blockquote>
+  <p>有些反馈基本没用，有些更糟糕——甚至会起反作用，你还不如什么都不说。即便你的意图是好的，给人夸奖与批评很有可能适得其反，而大多数人想不通为什么会这样。</p>
+
+  <p>请扪心自问，在读这本书之前，你觉得告诉别人他表现不佳是因为不够努力、用错方式或是根本追求错了东西，这样合适吗？</p>
+
+  <p>当你想赞美学生或职员时，你该夸他们聪明、用功还是该说你佩服他的毅力呢？你应该不吝赞美的词语还是仅把赞美用在主要成就上呢？如果你问十名经验丰富的管理者或老师，你可能会听到十组答案。</p>
+
+  <p>给人得当的反馈不是件容易的事。夸别人能力强，他们会飘飘然，当面临棘手情况时反而会掉下来摔得更狠。夸人努力有时好像在贬低别人的智力，但却能让他更好地面临接下来的挑战。为不痛不痒的小成就而连连赞美往往会削弱表现。</p>
+</blockquote>
+
+<h4 id="p211-当表现不尽如人意时">p.211 当表现不尽如人意时</h4>
+
+<blockquote>
+  <p>告诉别人表现不够好不是件容易的事。没人喜欢传达坏消息，而给予建设性批评是很难掌握的技巧。很多人都犯着可以理解的错误——认为不伤害对方感情是无比重要的原则。</p>
+
+  <p>我们总是说「不是你的错」「你已经尽力了」或者「这只不过不是你的强项而已」，不论这些话有没有任何真实性。实际上我们只是不想做批评对方的人，不想因此难受罢了。</p>
+</blockquote>
+
+<blockquote>
+  <p>如果你剥夺了别人对欠佳表现的责任感，对方也将失去掌控感。如果你不去为过去所做的事情负责又如何在未来的表现中进步呢？当然，我不是让你竭尽全力使职员、学生（或自己）在挣扎中沮丧，重点是：能有效激发动力的反馈常常不那么悦耳，而这并无大碍。为了对方好，你不该因担心后果而闪烁其词，避开对方最该听到的消息。</p>
+
+  <p>当他人遇到困难时，给予使他们相信成功仍可触及的反馈是关键。没什么比自我怀疑更使人泄气了。所以当你给出负面反馈时，有注意如下几点以确保听者受益。</p>
+</blockquote>
+
+<ol>
+  <li>尽可能具体的提出问题环节，以避免你和听者过于概括化地理解问题。</li>
+</ol>
+
+<h4 id="p214-当表现尽如人意时">p.214 当表现尽如人意时</h4>
+
+<blockquote>
+  <p>夸奖别人也会错吗？大多数人会不假思索地承认批评是分建设性与伤害性的，但说到赞誉的的对与错就犹豫了。实际上，赞扬也有可能增强或削弱他人的动力——这取决于你赞扬的内容和方式。</p>
+</blockquote>
+
+<p>赞美一方面会如我们所想，会增强他人的自信心和决心，另一方面赞美也会制造不必要的压力，使人们过于注重表面的维持，不敢冒险，也会削弱自主意识。</p>
+
+<blockquote>
+  <p>2002 年，心理学家珍妮弗 · 亨德隆和马克 · 莱珀对有关赞美效用的诸多研究进行了审评。他们发现对良好表现的反馈必须基于如下五个准则才能产生积极的作用。</p>
+
+  <p>准则一：赞美必须真诚——或者至少听起来是真诚的。缺乏诚意最明显的体现之一莫过于包含其他不明的动机。</p>
+
+  <p>准则二：你的赞美要着重于对方控制范围之内的因素。</p>
+
+  <p>准则三：当你给予赞美时，切勿把对方与他人做比较。</p>
+
+  <p>准则四：表扬不能剥夺对方的自主感受。</p>
+
+  <p>准则五：表扬必须传达现实的标准或期望值。</p>
+
+</blockquote>
+
+		<link rel="stylesheet" href="/diary/css/typo.css">
+    </article>
+</div>
+
+	<footer>
+    <span class="copyright">© 2016-2017 Soyaine</span>
+    <div>
+        <p class="comment">
+			Theme designed by <a href="https://github.com/soyaine">Soyaine</a><br>
+			Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> and <a href="https://github.com">GitHub</a>
+		</p>
+        
+		<ul class="contact">
+            <li><a href="http://www.jianshu.com/users/5e66b8b6fdc9/latest_articles"><i class="fa fa-3x fa-book"></i></a></li>
+            <li><a href="https://github.com/soyaine"><i class="fa fa-3x fa-github"></i> </a> </li>
+            <li><a href="http://twitter.com/soyaine"><i class="fa fa-3x fa-twitter"></i> </a> </li>
+            <li><a href="mailto:soyaine1@gmail.com"><i class="fa fa-envelope fa-3x"></i></a></li>
+        </ul>
+	</div>
+</footer>
+</body>
+<!--<script type="text/javascript" src="/diary/js/calendar.js"></script>-->
+</html>

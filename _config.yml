@@ -1,0 +1,23 @@
+baseurl: /diary
+name: Soyaine
+permalink: :year/:month/:day/:title
+ 
+# Change your social link here 
+# 网站底部的社交信息外链
+link:
+  email : soyaine1@gmail.com
+  github : soyaine
+  twitter : soyaine
+  jianshu: http://www.jianshu.com/users/5e66b8b6fdc9/latest_articles
+
+# Link in the navigation
+# 网站顶部的导航链接
+nav:
+   Home: http://soyaine.cn
+   Diary: http://soyaine.cn/diary/
+   Read: http://soyaine.cn/read/
+   Works: http://soyaine.cn/FE-Practice/
+   About: http://soyaine.cn/about.html
+   
+markdown: kramdown
+highlighter: rouge
