@@ -1,23 +1,30 @@
 baseurl: /diary
-name: Soyaine
+name: SlientSummer
 permalink: :year/:month/:day/:title
- 
+
 # Change your social link here 
 # 网站底部的社交信息外链
 link:
-  email : soyaine1@gmail.com
-  github : soyaine
-  twitter : soyaine
-  jianshu: http://www.jianshu.com/users/5e66b8b6fdc9/latest_articles
+  email : autoxiayj@gmail.com
+  github : YoujieXia
+  # twitter : soyaine
+  csdn_username: cxsydjn
+  jianshu_username: c357c55f62dc
+  linkedin_username: yjxia
 
 # Link in the navigation
 # 网站顶部的导航链接
 nav:
-   Home: http://soyaine.cn
-   Diary: http://soyaine.cn/diary/
-   Read: http://soyaine.cn/read/
-   Works: http://soyaine.cn/FE-Practice/
-   About: http://soyaine.cn/about.html
-   
+   Home: http://youjiexia.github.io
+   Archives: https://youjiexia.github.io/archive/
+   Categories: https://youjiexia.github.io/category/
+   Tags: https://youjiexia.github.io/tag/
+   Bookshelf: https://youjiexia.github.io/bookshelf/
+   Collections: https://youjiexia.github.io/collection/
+   Diary: http://youjiexia.github.io/diary/
+   About: https://youjiexia.github.io/about/
+
+
+
 markdown: kramdown
 highlighter: rouge
