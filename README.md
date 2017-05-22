@@ -34,5 +34,5 @@ Diary Theme Demo
 
 ## License
 
-Open sourced under the [MIT license](LICENSE.md). 
+Open sourced under the [MIT license](LICENSE). 
 
