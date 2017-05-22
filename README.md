@@ -1,6 +1,8 @@
 # Diary Theme for Jekyll
 
-This is an elegant **Diary Theme** based on [Jekyll](http://jekyllrb.com/) by [Soyaine](http://soyaine.cn). You can see her Github Repo [here](https://github.com/soyaine/jekyll-theme-diary). See a live [demo]( https://youjiexia.github.io/diary) here.
+This is an elegant **Diary Theme** based on [Jekyll](http://jekyllrb.com/) by [Soyaine](http://soyaine.cn). You can see her Github Repo [here](https://github.com/soyaine/jekyll-theme-diary). 
+
+See a live [demo]( https://youjiexia.github.io/diary) here in my website.
 
 **If you like this project, PLEASE give the [original repository](https://github.com/soyaine/jekyll-theme-diary) and [this one](https://github.com/YoujieXia/diary) a star.**
 
