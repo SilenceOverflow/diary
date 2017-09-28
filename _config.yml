@@ -1,5 +1,5 @@
 baseurl: /diary
-name: SlientSummer
+name: SilentSummer
 permalink: :year/:month/:day/:title
 
 # Change your social link here 
